@@ -3,8 +3,8 @@
 spl_autoload_register(function($class) {
 
   $directories = array(
-      'adapter-design-pattern',
-      'builder-design-pattern',
+      'adapter-design-pattern/implementation1',
+      'builder-design-pattern/implementation1',
   );
 
   foreach ($directories as $dir) {

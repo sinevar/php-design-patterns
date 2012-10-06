@@ -2,11 +2,16 @@
 
 spl_autoload_register(function($class) {
 
-  foreach (array('adapter-design-pattern/classes') as $dir) {
-    $file = "$dir/$class.php";
-    if (file_exists($file)) {
-      include $file;
-    }
+  $directories = array(
+      'adapter-design-pattern',
+      'builder-design-pattern',
+  );
+
+  foreach ($directories as $dir) {
+      $file = "$dir/classes/$class.php";
+      if (file_exists($file)) {
+          include $file;
+      }
   }
 
 });
